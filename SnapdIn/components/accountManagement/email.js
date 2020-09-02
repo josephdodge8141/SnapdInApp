@@ -37,7 +37,7 @@ export const Email = ({ navigation }) => {
       contentInsetAdjustmentBehavior="automatic"
       style={styles.scrollView}>
       <StatusBar barStyle="dark-content" />
-      <View style={styles.body}>
+      <View>
         <Text style={styles.heading}>
           Welcome
         </Text>
@@ -67,9 +67,6 @@ const styles = StyleSheet.create({
   scrollView: {
     height: '100%',
     padding: 20,
-  },
-  body: {
-    backgroundColor: '#fff',
   },
   heading: {
     fontSize: 32,
