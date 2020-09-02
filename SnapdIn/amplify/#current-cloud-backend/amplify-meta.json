@@ -1,0 +1,82 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-snapdin-dev-181047-authRole",
+      "UnauthRoleArn": "arn:aws:iam::540413173226:role/amplify-snapdin-dev-181047-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::540413173226:role/amplify-snapdin-dev-181047-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-snapdin-dev-181047-deployment",
+      "UnauthRoleName": "amplify-snapdin-dev-181047-unauthRole",
+      "StackName": "amplify-snapdin-dev-181047",
+      "StackId": "arn:aws:cloudformation:us-west-2:540413173226:stack/amplify-snapdin-dev-181047/c23342c0-ecb0-11ea-9eb4-06febab859ee",
+      "AmplifyAppId": "d2him78e4vvt3d"
+    },
+    "categories": {
+      "auth": {
+        "snapdin80fd6984": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2him78e4vvt3d",
+          "type": "cicd"
+        }
+      }
+    }
+  },
+  "api": {
+    "snapdin": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7,
+              "description": "auth"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "t5n3mgb5bfhlrdci46q2lr2pse",
+        "GraphQLAPIEndpointOutput": "https://civmkozxe5gtrfqxae2neoayyi.appsync-api.us-west-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-mz2km4m6gfekzfmqbloz4zarta"
+      },
+      "lastPushTimeStamp": "2020-09-02T02:33:56.150Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-snapdin-dev-181047-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apisnapdin"
+      },
+      "lastPushDirHash": "lU5zc6ag8ZWxJNpaZFMigsoRKUQ="
+    }
+  },
+  "auth": {
+    "snapdin80fd6984": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "AppClientSecret": "jokr7jqoh93i9aqtui3ghic0rmn7s4vsg7990ur158mn9d92q95",
+        "UserPoolId": "us-west-2_nQlE4zhyH",
+        "AppClientIDWeb": "11humkbu16kbh384qo192se915",
+        "AppClientID": "cdmm22h3lsmfe1af2dtoughn",
+        "IdentityPoolId": "us-west-2:b112cdbe-2e00-4b6c-9120-a1b900b9aab4",
+        "IdentityPoolName": "snapdin80fd6984_identitypool_80fd6984__dev",
+        "UserPoolName": "snapdin80fd6984_userpool_80fd6984"
+      },
+      "lastPushTimeStamp": "2020-09-02T02:33:56.150Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-snapdin-dev-181047-deployment/amplify-cfn-templates/auth/snapdin80fd6984-cloudformation-template.yml",
+        "logicalId": "authsnapdin80fd6984"
+      },
+      "lastPushDirHash": "Tocfk4/VkBQaQcBR7zGKF/UY/Vo="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd"
+    }
+  }
+}
