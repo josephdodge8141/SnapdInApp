@@ -1,31 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { Email } from './components/accountManagement/email';
-import { SignUp } from './components/accountManagement/signUp';
-import { withAuthenticator } from 'aws-amplify-react-native'
+import React from "react";
+import { Font } from "expo-font";
+import { Text } from "react-native";
 
-const Stack = createStackNavigator();
+import EStyleSheet from "react-native-extended-stylesheet";
 
-const App: () => React$Node = () => {
+import Routes from "./src/Routes";
 
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false
-      }}>
-        <Stack.Screen
-          name='Email'
-          component={Email}
-        />
-        <Stack.Screen
-          name='SignUp'
-          component={SignUp}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: false };
+  }
 
-export default withAuthenticator(App);
+
+
+  render() {
+    if (this.state.loading) {
+      return <Text>Wait Loading</Text>;
+    }
+    return <Routes />;
+  }
+}
+
+EStyleSheet.build({
+  $primaryColor: "#fff"
+});
+
+export default App;
